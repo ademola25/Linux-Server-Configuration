@@ -119,7 +119,7 @@ STEP 3:
 
  *  Make a catalog.wsgi file to serve the application over the mod_wsgi. Below is the content
  *  Create the wsgi file using: cd /var/www/catalogApp
- 
+ ```
     activate_this = '/var/www/catalogApp/catalog/venv/bin/activate_this.py'
     execfile(activate_this, dict(__file__=activate_this))
     import sys
@@ -129,7 +129,7 @@ STEP 3:
 
     from catalog import app as application
     application.secret_key = 'add your secret key'
-    
+  ```
   * Restart Apache : sudo service apache2 restart
  
  
@@ -147,15 +147,15 @@ STEP 3:
  *  Return to the grader user: $ exit.
  Now set the database connection inside the application to
   engine = create_engine('postgresql://catalog:postgres@localhost/catalog')
- *  Setup the database with: $ python /var/www/catalogApp/catalog/database_setup.py.
- *  Setup the database with: $ python /var/www/catalogApp/catalog/lotsofspaitem.py.
- *  Setup the database with: $ python /var/www/catalogApp/catalog/__init__.py.
+ *  Setup the database with: $ `python /var/www/catalogApp/catalog/database_setup.py`.
+ *  Setup the database with: $ `python /var/www/catalogApp/catalog/lotsofspaitem.py`.
+ *  Setup the database with: $ `python /var/www/catalogApp/catalog/__init__.py`.
  
  ###  Run the application:
  *  move to  /var/www/catalogApp/catalog directory
  *  Create the database schema: python database_setup.py python lotsofspaitem.py
  *  Restart Apache : sudo service apache2 restart
- *  execute - python __init__.py
+ *  execute - `python __init__.py`
 
 ### Update OAuth authorized JavaScript origins
 * Go to xip.io and get the host name of public IP address 18.184.157.0.xip.io
