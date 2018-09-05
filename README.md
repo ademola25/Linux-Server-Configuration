@@ -158,10 +158,16 @@ STEP 3:
  *  execute - `python __init__.py`
 
 ### Update OAuth authorized JavaScript origins
+Update Google OAuth client secret and redirect
 * Go to xip.io and get the host name of public IP address 18.184.157.0.xip.io
 * sudo nano /etc/apache2/sites-available/catalog.conf and 
 * Add the hostname below ServerAlias: paste ServerAlias ec2-18-184-157-0.eu-central-1.compute.amazonaws.com
 * Enable the virtual host : sudo a2ensite catalog
+* go to [console.developers.google.com] then to credential and edit
+* change the javascript_origins field to the IP address and AWS assigned URL of the host. 
+"javascript_origins":["http://18.184.157.0.xip.io", "http://ec2-18-184-157-0.eu-central-1.compute.amazonaws.com/"]
+* then Redownload client_secrets.json
+* then edit the path of the client_secret.json in your mail project file
 
 
 ### Restart Apache to launch the application
