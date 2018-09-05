@@ -71,7 +71,7 @@ When the grader user issues a sudo command, got the following warning: sudo: una
  *  Move to the www directory: $ cd /var/www
  *  create a directory for the application. catalog: $ sudo mkdir catalogApp
  *  Move inside that newly created folder: $ cd /catalog and 
- *  clone the catalog repository from Github: $ sudo git clone https://github.com/ademola25/catalog.git
+ *  clone the catalog repository from Github: $ sudo git clone https://github.com/ademola25/catalog.git' .
  *  To make github repository inaccessible make a .htaccess file: $ cd /var/www/catalogApp/ and : $ sudo nano .htaccess
   Paste in the following: RedirectMatch 404 /\.git
  ###  Install virtual environment, Flask and the project's dependencies
