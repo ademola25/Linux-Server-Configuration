@@ -4,8 +4,6 @@ Full-stack Nano degree web development Program udacity Fifth Project
 ## Project Detail:
 * A baseline installation of a Linux server, prepared  to host my web applications. Then i secured the server from a number of attack vectors, then i installed and configured a database server, and i finally deployed my Spa Catalog web applications onto it.
 
-
-
 ## Server Details
     ip: 18.184.157.0.xip.io/
     url: http://ec2-18-184-157-0.eu-central-1.compute.amazonaws.com/
@@ -20,9 +18,8 @@ Full-stack Nano degree web development Program udacity Fifth Project
 * Give Sudo Permissions to Grader: sudo usermod -aG sudo grader
 
 ### Update and Upgrade all Packages
-Run sudo apt-get update command to update package indexes.
-Run sudo apt-get upgrade command to upgrade and install packages.
-If at login the message System restart required is display, run the following command to reboot the machine: reboot.
+*   To update packages indexes: sudo apt-get update
+*   To upgrade all installed packages indexes: sudo apt-get upgrade 
 
 ### Fix sudo resolve host error
 When the grader user issues a sudo command, got the following warning: sudo: unable to resolve host ip-172-26-15-250
@@ -51,7 +48,6 @@ When the grader user issues a sudo command, got the following warning: sudo: una
  Open time configuration dialog and set it to UTC with: $ sudo dpkg-reconfigure tzdata
  
  ###  Configuration Uncomplicated Firewall (UFW)
- 
  *  By default, block all incoming connections on all ports: sudo ufw default deny incoming
  *  Allow outgoing connection on all ports: sudo ufw default allow outgoing
  *  Allow incoming connection for SSH on port 2200: sudo ufw allow 2200/tcp
@@ -72,7 +68,6 @@ When the grader user issues a sudo command, got the following warning: sudo: una
  *  Configure your email: $ git config --global user.email <email-address>.
   
  ### Clone the Catalog app from Github
- 
  *  Move to the www directory: $ cd /var/www
  *  create a directory for the application. catalog: $ sudo mkdir catalogApp
  *  Move inside that newly created folder: $ cd /catalog and 
@@ -139,7 +134,6 @@ STEP 3:
  
  
  ###  Install and configure PostgreSQL
- 
  *  Install PostgreSQL: $ sudo apt-get install postgresql postgresql-contrib.
  *  A postgres username will be automatically ctreated during its installation and this user name can access the database software.
     so we switch to the postgres user by:$ sudo su - postgres and then connect to the database with: $ psql
@@ -171,7 +165,7 @@ STEP 3:
 
 
 ### Restart Apache to launch the application
-To make these Apache2 configuration changes, reload Apache: sudo service apache2 restart
+To make these Apache2 configuration changes: sudo service apache2 restart
 
 
 # License
@@ -187,6 +181,7 @@ Project is released under the [MIT License](http://opensource.org/licenses/MIT).
 [virtual environment installation](http://flask.pocoo.org/docs/0.12/installation/#installation)
 
 ### References:
-* [amunategui blog](http://amunategui.github.io/idea-to-pitch/#installing-flask)
-
+* [Going from an Idea to a Pitch: Hosting your Python App using Flask and AWS](https://www.youtube.com/watch?v=3HuYr6G2Z28)
+* [Manuel Amunategui's github](http://amunategui.github.io/idea-to-pitch/#installing-flask)
+* [Google OAuth API and Authorized redirect URIs with IP adr not allowed](https://discussions.udacity.com/t/google-oauth-api-and-authorized-redirect-uris-with-ip-adr-not-allowed/515313)
 * Udacity Mentor
